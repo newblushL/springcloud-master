@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../eurake-client-user-service/eurake.iml" filepath="$PROJECT_DIR$/../eurake-client-user-service/eurake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../eureka-client-article-service/eureka.iml" filepath="$PROJECT_DIR$/../eureka-client-article-service/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springcloud/feign/feign.iml" filepath="$PROJECT_DIR$/../springcloud/feign/feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springcloud/feign-inherit-api/feign-inherit-api.iml" filepath="$PROJECT_DIR$/../springcloud/feign-inherit-api/feign-inherit-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springcloud/feign-inherit-consume/feign-inherit-consume.iml" filepath="$PROJECT_DIR$/../springcloud/feign-inherit-consume/feign-inherit-consume.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springcloud/feign-inherit-provide/feign-inherit-provide.iml" filepath="$PROJECT_DIR$/../springcloud/feign-inherit-provide/feign-inherit-provide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../eurake-server/sc.iml" filepath="$PROJECT_DIR$/../eurake-server/sc.iml" />
+    </modules>
+  </component>
+</project>

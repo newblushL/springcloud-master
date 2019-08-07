@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka" />
+        <module name="feign-inherit-api" />
+        <module name="eurake" />
+        <module name="sc" />
+        <module name="feign" />
+        <module name="feign-inherit-provide" />
+        <module name="feign-inherit-consume" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eurake" target="1.8" />
+      <module name="eureka" target="1.8" />
+      <module name="feign" target="1.8" />
+      <module name="feign-inherit-api" target="1.8" />
+      <module name="feign-inherit-consume" target="1.8" />
+      <module name="feign-inherit-provide" target="1.8" />
+      <module name="sc" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eurake" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="feign" options="-parameters" />
+      <module name="feign-inherit-api" options="-parameters" />
+      <module name="feign-inherit-consume" options="-parameters" />
+      <module name="sc" options="-parameters" />
+    </option>
+  </component>
+</project>
