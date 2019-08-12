@@ -6,12 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="hystrix" />
+        <module name="ribbon" />
         <module name="eureka" />
         <module name="feign-inherit-api" />
         <module name="eurake" />
         <module name="sc" />
         <module name="feign" />
         <module name="feign-inherit-provide" />
+        <module name="hystrix-feign-demo" />
         <module name="feign-inherit-consume" />
       </profile>
     </annotationProcessing>
@@ -22,6 +25,9 @@
       <module name="feign-inherit-api" target="1.8" />
       <module name="feign-inherit-consume" target="1.8" />
       <module name="feign-inherit-provide" target="1.8" />
+      <module name="hystrix" target="1.8" />
+      <module name="hystrix-feign-demo" target="1.8" />
+      <module name="ribbon" target="1.8" />
       <module name="sc" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -32,6 +38,10 @@
       <module name="feign" options="-parameters" />
       <module name="feign-inherit-api" options="-parameters" />
       <module name="feign-inherit-consume" options="-parameters" />
+      <module name="feign-inherit-provide" options="-parameters" />
+      <module name="hystrix" options="-parameters" />
+      <module name="hystrix-feign-demo" options="-parameters" />
+      <module name="ribbon" options="-parameters" />
       <module name="sc" options="-parameters" />
     </option>
   </component>
