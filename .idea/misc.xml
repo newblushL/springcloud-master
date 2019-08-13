@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix-feign-demo/pom.xml" />
         <option value="$PROJECT_DIR$/../springcloud-ribbon/spring-rest-template/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix-dashboard-demo/pom.xml" />
       </list>
     </option>
   </component>

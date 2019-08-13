@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/../springcloud/feign-inherit-consume/feign-inherit-consume.iml" filepath="$PROJECT_DIR$/../springcloud/feign-inherit-consume/feign-inherit-consume.iml" />
       <module fileurl="file://$PROJECT_DIR$/../springcloud/feign-inherit-provide/feign-inherit-provide.iml" filepath="$PROJECT_DIR$/../springcloud/feign-inherit-provide/feign-inherit-provide.iml" />
       <module fileurl="file://$PROJECT_DIR$/hystrix/hystrix.iml" filepath="$PROJECT_DIR$/hystrix/hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix-dashboard-demo/hystrix-dashboard-demo.iml" filepath="$PROJECT_DIR$/hystrix-dashboard-demo/hystrix-dashboard-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/hystrix-feign-demo/hystrix-feign-demo.iml" filepath="$PROJECT_DIR$/hystrix-feign-demo/hystrix-feign-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/../springcloud-ribbon/spring-rest-template/ribbon.iml" filepath="$PROJECT_DIR$/../springcloud-ribbon/spring-rest-template/ribbon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../eurake-server/sc.iml" filepath="$PROJECT_DIR$/../eurake-server/sc.iml" />
