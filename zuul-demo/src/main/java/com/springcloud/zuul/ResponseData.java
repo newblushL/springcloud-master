@@ -10,17 +10,17 @@ public class ResponseData {
     private String message;
     private Object data;
 
-    public ResponseData(){
+    public ResponseData() {
         super();
     }
 
-    public ResponseData(int code,String message){
+    public ResponseData(int code, String message) {
         this.code = code;
         this.message = message;
     }
 
-    public static ResponseData fail(int code,String message){
-        return new ResponseData(code,message);
+    public static ResponseData fail(int code, String message) {
+        return new ResponseData(code, message);
     }
 
     public int getCode() {

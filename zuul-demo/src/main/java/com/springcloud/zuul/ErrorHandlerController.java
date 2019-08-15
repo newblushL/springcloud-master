@@ -29,17 +29,17 @@ public class ErrorHandlerController implements ErrorController {
     }
 
     @RequestMapping("/error")
-    public ResponseData error(HttpServletRequest request){
-        Map<String,Object> errorAttributes = getErrorAttributes(request);
-        String message = (String)errorAttributes.get("message");
+    public ResponseData error(HttpServletRequest request) {
+        Map<String, Object> errorAttributes = getErrorAttributes(request);
+        String message = (String) errorAttributes.get("message");
         String trace = (String) errorAttributes.get("trace");
-        if(StringUtils.isNotBlank(trace)){
-            message += String.format(" and trace %s" ,trace);
+        if (StringUtils.isNotBlank(trace)) {
+            message += String.format(" and trace %s", trace);
         }
-        return ResponseData.fail(400,message);
+        return ResponseData.fail(400, message);
     }
 
     private Map<String, Object> getErrorAttributes(HttpServletRequest request) {
-        return errorAttributes.getErrorAttributes(new ServletWebRequest(request),true);
+        return errorAttributes.getErrorAttributes(new ServletWebRequest(request), true);
     }
 }

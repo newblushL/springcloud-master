@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class FilterConfig {
 
     @Bean
-    public IpFilter ipFilter(){
+    public IpFilter ipFilter() {
         return new IpFilter();
     }
 }

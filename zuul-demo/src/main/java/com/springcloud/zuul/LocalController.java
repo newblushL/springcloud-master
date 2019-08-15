@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LocalController {
     @GetMapping("/local/{id}")
-    public String local(@PathVariable String id){
+    public String local(@PathVariable String id) {
         return id;
     }
 
     @GetMapping("/hello")
-    public String hello(){
+    public String hello() {
         return "hello";
     }
 }

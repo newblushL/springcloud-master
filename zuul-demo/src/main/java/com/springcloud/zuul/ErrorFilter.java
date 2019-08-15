@@ -31,10 +31,10 @@ public class ErrorFilter extends ZuulFilter {
     }
 
     @Override
-    public Object run(){
+    public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         Throwable throwable = ctx.getThrowable();
-        log.error("Filter Error : {}",throwable.getCause().getMessage());
+        log.error("Filter Error : {}", throwable.getCause().getMessage());
         return null;
     }
 }
