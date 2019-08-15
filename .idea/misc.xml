@@ -14,6 +14,10 @@
         <option value="$PROJECT_DIR$/hystrix-feign-demo/pom.xml" />
         <option value="$PROJECT_DIR$/../springcloud-ribbon/spring-rest-template/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix-dashboard-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../springcloud-ribbon/ribbon-native-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot-matser/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot/pom.xml" />
       </list>
     </option>
   </component>

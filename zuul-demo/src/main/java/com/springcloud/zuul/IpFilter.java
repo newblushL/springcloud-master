@@ -2,8 +2,8 @@ package com.springcloud.zuul;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,8 +15,7 @@ import java.util.List;
  */
 public class IpFilter extends ZuulFilter {
 
-    //IP黑名单列表
-    private List<String> blackIpList = Arrays.asList("192.168.0.104");
+    private List<String> blackIpList = Arrays.asList("192.168.0.101");
 
     public IpFilter(){
         super();
@@ -45,6 +44,8 @@ public class IpFilter extends ZuulFilter {
         if(StringUtils.isNotBlank(ip) && blackIpList.contains(ip)){
             // 告诉Zuul不需要将当前请求转发到后端服务
             ctx.setSendZuulResponse(false);
+            // 配置来forward:/local的路由，ctx.setSendZuulResponse(false)是不起作用的，需要设置
+            ctx.set("sendForwardFilter.ran",true);
             ResponseData data = ResponseData.fail("非法请求",400);
             // 通过setResponseBody返回数据给客户端
             ctx.setResponseBody(JsonUtils.objectToJson(data));

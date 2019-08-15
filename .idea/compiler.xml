@@ -6,17 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka" />
-        <module name="feign" />
-        <module name="feign-inherit-api" />
-        <module name="eurake" />
-        <module name="sc" />
-        <module name="hystrix" />
         <module name="feign-inherit-provide" />
+        <module name="ribbon (1)" />
         <module name="ribbon" />
         <module name="hystrix-feign-demo" />
-        <module name="feign-inherit-consume" />
+        <module name="zuul-demo" />
         <module name="hystrix-dashboard-demo" />
+        <module name="feign" />
+        <module name="feign-inherit-consume" />
+        <module name="hystrix" />
+        <module name="eurake" />
+        <module name="ll" />
+        <module name="eureka" />
+        <module name="feign-inherit-api" />
+        <module name="ll (1)" />
+        <module name="sc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,8 +33,12 @@
       <module name="hystrix" target="1.8" />
       <module name="hystrix-dashboard-demo" target="1.8" />
       <module name="hystrix-feign-demo" target="1.8" />
+      <module name="ll" target="1.8" />
+      <module name="ll (1)" target="1.8" />
       <module name="ribbon" target="1.8" />
+      <module name="ribbon (1)" target="1.8" />
       <module name="sc" target="1.8" />
+      <module name="zuul-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -44,8 +52,12 @@
       <module name="hystrix" options="-parameters" />
       <module name="hystrix-dashboard-demo" options="-parameters" />
       <module name="hystrix-feign-demo" options="-parameters" />
+      <module name="ll" options="-parameters" />
+      <module name="ll (1)" options="-parameters" />
       <module name="ribbon" options="-parameters" />
+      <module name="ribbon (1)" options="-parameters" />
       <module name="sc" options="-parameters" />
+      <module name="zuul-demo" options="-parameters" />
     </option>
   </component>
 </project>

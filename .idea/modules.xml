@@ -11,8 +11,12 @@
       <module fileurl="file://$PROJECT_DIR$/hystrix/hystrix.iml" filepath="$PROJECT_DIR$/hystrix/hystrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/hystrix-dashboard-demo/hystrix-dashboard-demo.iml" filepath="$PROJECT_DIR$/hystrix-dashboard-demo/hystrix-dashboard-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/hystrix-feign-demo/hystrix-feign-demo.iml" filepath="$PROJECT_DIR$/hystrix-feign-demo/hystrix-feign-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springboot-matser/ll.iml" filepath="$PROJECT_DIR$/../springboot-matser/ll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springboot/ll (1).iml" filepath="$PROJECT_DIR$/../springboot/ll (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/../springcloud-ribbon/spring-rest-template/ribbon.iml" filepath="$PROJECT_DIR$/../springcloud-ribbon/spring-rest-template/ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springcloud-ribbon/ribbon-native-demo/ribbon (1).iml" filepath="$PROJECT_DIR$/../springcloud-ribbon/ribbon-native-demo/ribbon (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/../eurake-server/sc.iml" filepath="$PROJECT_DIR$/../eurake-server/sc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-demo/zuul-demo.iml" filepath="$PROJECT_DIR$/zuul-demo/zuul-demo.iml" />
     </modules>
   </component>
 </project>
