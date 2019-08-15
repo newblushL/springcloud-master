@@ -18,6 +18,6 @@ public class LocalController {
 
     @GetMapping("/hello")
     public String hello(){
-        return "heelo";
+        return "hello";
     }
 }

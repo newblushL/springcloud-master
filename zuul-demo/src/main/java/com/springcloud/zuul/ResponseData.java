@@ -6,7 +6,6 @@ package com.springcloud.zuul;
  * @create: 2019-08-14 00:43
  */
 public class ResponseData {
-    private Boolean status = true;
     private int code = 200;
     private String message;
     private Object data;
@@ -15,21 +14,13 @@ public class ResponseData {
         super();
     }
 
-    public ResponseData(String message, int code){
-        this.message = message;
+    public ResponseData(int code,String message){
         this.code = code;
+        this.message = message;
     }
 
-    public static ResponseData fail(String message, int code){
-        return new ResponseData(message,code);
-    }
-
-    public Boolean getStatus() {
-        return status;
-    }
-
-    public void setStatus(Boolean status) {
-        this.status = status;
+    public static ResponseData fail(int code,String message){
+        return new ResponseData(code,message);
     }
 
     public int getCode() {

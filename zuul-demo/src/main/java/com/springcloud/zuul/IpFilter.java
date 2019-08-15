@@ -3,8 +3,6 @@ package com.springcloud.zuul;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.apache.commons.lang.StringUtils;
-import org.springframework.stereotype.Component;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,7 +13,7 @@ import java.util.List;
  */
 public class IpFilter extends ZuulFilter {
 
-    private List<String> blackIpList = Arrays.asList("192.168.0.101");
+    private List<String> blackIpList = Arrays.asList("192.168.0.104");
 
     public IpFilter(){
         super();
@@ -33,11 +31,16 @@ public class IpFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        RequestContext ctx = RequestContext.getCurrentContext();
+        // 根据参数决定是否执行过滤器
+        Object success = ctx.get("isSuccess");
+        return success == null ? true : Boolean.parseBoolean(success.toString());
     }
 
     @Override
     public Object run(){
+        // 模拟异常信息，试试ErrorFilter
+        // System.out.println(2/0);
         RequestContext ctx = RequestContext.getCurrentContext();
         String ip = IpUtils.getIpAddr(ctx.getRequest());
         // 在黑名单中禁用
@@ -46,7 +49,9 @@ public class IpFilter extends ZuulFilter {
             ctx.setSendZuulResponse(false);
             // 配置来forward:/local的路由，ctx.setSendZuulResponse(false)是不起作用的，需要设置
             ctx.set("sendForwardFilter.ran",true);
-            ResponseData data = ResponseData.fail("非法请求",400);
+            // 设置一个标识是否成功，为true后续的过滤器才执行，若为false则不执行
+            ctx.set("isSuccess",false);
+            ResponseData data = ResponseData.fail(400,"非法请求");
             // 通过setResponseBody返回数据给客户端
             ctx.setResponseBody(JsonUtils.objectToJson(data));
             ctx.getResponse().setContentType("application/json; charset=utf-8");
