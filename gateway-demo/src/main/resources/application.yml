@@ -1,0 +1,112 @@
+server:
+  port: 9005
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://ll:123456@127.0.0.1:8761/eureka,http://ll:123456@127.0.0.1:8762/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+    lease-expiration-duration-in-seconds: 5
+    lease-renewal-interval-in-seconds: 5
+spring:
+  application:
+    name: gateway-demo-service
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+         - id: path_route
+           uri: http://httpbin.org/get
+           predicates:
+             - Path=/user/**
+#        # Path断言工厂
+#        - id: user-service
+#          uri: lb://user-service
+#          predicates:
+#            - Path=/user-service/**
+#        # Query断言工厂
+#        - id: query_route
+#          uri: http://www.jingdong.com
+#          predicates:
+#            - Query=foo, ba.
+#        # Method断言工厂
+#        - id: method_route
+#          uri: http://www.4399.com
+#          predicates:
+#            - Method=GET
+#        # Header路由断言工厂
+#        - id: header_route
+#          uri: http://www.taobao.com
+#          predicates:
+#            - Header=X-Request-ID, \d+
+#        # 自定义断言工厂
+#        - id: customer_route
+#          uri: http://www.baidu.com
+#          predicates:
+#            - name: CheckAuth
+#              args:
+#                name: ll
+#        # AddRequestHeader过滤器工厂
+#        - id: add_request_header_route
+#          uri: http://cxytiandi.com
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - AddRequestHeader=X-Request-Foo, Bar
+#        # RemoveRequestHeader过滤器工厂
+#        - id: remove_request_header_route
+#          uri: http://www.7k7k.com
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - RemoveRequestHeader=X-Request-Foo
+#        # SetStatus过滤器工厂
+#        - id: setstatus_route
+#          uri: http://www.sougou.com
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - SetStauts=404
+#        # RedirectTo过滤器工厂
+#        - id: prefixpath_route
+#          uri: http://www.vip.com
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - RedirectTo=302, http://www.baidu.com
+#        # 自定义过滤器工厂
+#        - id: customer_factory_route
+#          uri: http://www.baidu.com
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - CheckAuth
+#        # 自定义过滤器工厂2
+#        - id: customer_factory_route2
+#          uri: http://www.baidu.com
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - CheckAuth=ll,男
+#         # 限流过滤器
+#         - id: limit_route
+#           uri: http://httpbin.org/get
+#           predicates:
+#             - Path=/user/**
+#           filters:
+#             - name: RequestRateLimiter
+#               args:
+#                 # 允许用户每秒处理多少个请求
+#                 redis-rate-limiter.replenishRate: 10
+#                 # 令牌桶容量，允许在1s内完成的最大请求数
+#                 redis-rate-limiter.burstCapacity: 20
+#                 key-resolver: "#{@ipKeyResolver}"
