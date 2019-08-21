@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: sleuth-con
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ll:123456@127.0.0.1:8761/eureka/
+  instance:
+    prefer-ip-address: true
